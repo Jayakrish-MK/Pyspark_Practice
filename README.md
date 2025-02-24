@@ -44,11 +44,13 @@ Optimized queries to improve performance in PostgreSQL
 1. Clone the Repository:
 
 git clone <repository-url>
+
 cd <repository-folder>
 
 2. Set Up the Virtual Environment (Optional):
 
 python -m venv venv
+
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 3. Install Dependencies:
@@ -60,13 +62,21 @@ pip install pyspark psycopg2 pandas matplotlib
   # Update the database credentials in the script:
 
 db_properties = {
+
     "user": "your_username",
+    
     "password": "your_password",
+    
     "driver": "org.postgresql.Driver"
+    
 }
+
 jdbc_url = "jdbc:postgresql://localhost:5432/your_database"
 
 # Run PySpark Scripts:
+
 spark-submit employee_sales_analysis.ipynb
+
 spark-submit customer_churn_analysis.ipynb
+
 spark-submit ecommerce_sales_analysis.ipynb
